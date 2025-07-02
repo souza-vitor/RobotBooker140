@@ -2,7 +2,7 @@
     "firstname" : "Timmy",
     "lastname" : "Turner",
     "totalprice" : 150,
-    "depositpaid" : true,
+    "depositpaid" : false,
     "bookingdates" : {
         "checkin" : "2025-07-01",
         "checkout" : "2025-07-02"
