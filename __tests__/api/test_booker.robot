@@ -10,10 +10,13 @@ Library        RequestsLibrary
 Resource       ../../resources/common.resource
 Variables      ../../resources/variables.py
 Suite Setup    Create Token    ${url}
+Test Setup    Get Booking Ping    ${url}
+
 
 *** Test Cases ***
 Create Booking
     # Header é opcional na criação
+    
     ${headers}    Create Dictionary    Content-Type=${content_type}
     ${body}    Evaluate    json.loads(open('./fixtures/json/booking1.json').read())
     

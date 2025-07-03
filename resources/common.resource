@@ -27,3 +27,13 @@ Get Booking Id
     
     ${booking_id}    Set Variable    ${response_body}[0][bookingid]
     Set Suite Variable    ${booking_id}    # variavel "publica", pode ser vista por todo o projeto
+
+Get Booking Ping
+    [Arguments]    ${url}
+
+    ${response}    GET    url=${url}/ping    
+
+    #${response_body}    Set Variable    ${response.json()}
+    Log To Console    ${response}
+
+    Status Should Be    201
